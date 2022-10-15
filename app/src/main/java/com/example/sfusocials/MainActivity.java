@@ -31,17 +31,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //UserButton.setOnClickListener(new View.OnClickListener()
-        //{
-        //   public void onClick(View v){
-        //    Intent intent = new Intent(this, patientCreation.class);
-        //    startActivity(intent);
-        //    }
-        //}); TODO: uncomment when user interface finished.
+        UserButton.setOnClickListener(new View.OnClickListener()
+        {
+           public void onClick(View v){ openUser(); }
+        });
     }
 
     public void openHost() {
         Intent intent = new Intent(this, HostLogin.class);
+        startActivity(intent);
+    }
+
+    public void openUser(){
+        Intent intent = new Intent(this, EventList.class);
         startActivity(intent);
     }
 }
