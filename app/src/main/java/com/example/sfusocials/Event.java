@@ -10,6 +10,8 @@ public class Event {
     private String hostName;
     private String eventName;
     private String startTime;
+    private String startDate;
+
 //    private String tags;
 
 
@@ -17,12 +19,13 @@ public class Event {
 
     }
 
-    public Event(String duration, String hostName, String eventName, String startTime) {
+    public Event(String duration, String hostName, String eventName, String startTime, String startDate) {
 //        this.eventID = eventID;
         this.duration = duration;
         this.hostName = hostName;
         this.eventName = eventName;
         this.startTime = startTime;
+        this.startDate = startDate;
     }
 
 //    public Integer getEventID() {
@@ -43,5 +46,9 @@ public class Event {
 
     public String getStartTime() {
         return startTime;
+    }
+
+    public String getStartDate() {
+        return startDate;
     }
 }
