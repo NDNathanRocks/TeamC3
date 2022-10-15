@@ -8,6 +8,10 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.content.Intent;
+import android.os.Bundle;
+
+
 public class MainActivity extends AppCompatActivity {
 
     Button HostButton;
@@ -34,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         //    startActivity(intent);
         //    }
         //}); TODO: uncomment when user interface finished.
-
     }
 
     public void openHost() {
