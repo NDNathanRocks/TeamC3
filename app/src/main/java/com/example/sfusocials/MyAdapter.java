@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.text.BreakIterator;
 import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
@@ -37,7 +38,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         myViewHolder.hostName.setText(event.getHostName());
         myViewHolder.duration.setText(event.getDuration());
         myViewHolder.startTime.setText(event.getStartTime());
-
+        myViewHolder.startDate.setText(event.getStartDate());
     }
 
     @Override
@@ -46,14 +47,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView eventName, hostName, duration, startTime;
+        TextView eventName, hostName, duration, startTime, startDate;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             eventName = itemView.findViewById(R.id.textEventName);
             hostName = itemView.findViewById(R.id.textHostName);
             duration = itemView.findViewById(R.id.textDuration);
             startTime = itemView.findViewById(R.id.textStartTime);
-
+            startDate  = itemView.findViewById(R.id.textStartDate);
         }
     }
 }
